@@ -4,6 +4,7 @@ import productController from "../controller/productController";
 import shopController from '../controller/shopController';
 import checkoutController from "../controller/checkoutController";
 import cartController from "../controller/cartController";
+import signupController from "../controller/signupController"
 let router = express.Router();
 
 const initWebRoute = (app) => {
@@ -12,6 +13,7 @@ const initWebRoute = (app) => {
     router.get('/checkout', checkoutController.checkout);
     router.get('/product',productController.product);
     router.get('/cart', cartController.cart);
+    router.get('/signup', signupController.signup);
     // router.get('/about', (req, res) => {
     //     res.send(`I'm linh!`)
     // })
