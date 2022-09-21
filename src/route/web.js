@@ -3,7 +3,7 @@ import homeController from '../controller/homeController';
 import productController from "../controller/productController";
 import shopController from '../controller/shopController';
 import checkoutController from "../controller/checkoutController";
-// import cartController from "../controller/cartController";
+import cartController from "../controller/cartController";
 let router = express.Router();
 
 const initWebRoute = (app) => {
@@ -11,7 +11,7 @@ const initWebRoute = (app) => {
     router.get('/shop', shopController.shop);
     router.get('/checkout', checkoutController.checkout);
     router.get('/product',productController.product);
-    // router.get('/Cart', checkoutController.Cart);
+    router.get('/cart', cartController.cart);
     // router.get('/about', (req, res) => {
     //     res.send(`I'm linh!`)
     // })
