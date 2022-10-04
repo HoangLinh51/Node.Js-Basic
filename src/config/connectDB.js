@@ -1,33 +1,13 @@
-const { Sequelize } = require("sequelize");
+// get the client
+import mysql from "mysql2/promise";
 
-// Option 3: Passing parameters separately (other dialects)
-const sequelize = new Sequelize("leelectronic", "root", null, {
+// create the connection to database
+console.log("Creating connection pool...");
+
+const pool = mysql.createPool({
   host: "localhost",
-  dialect: "mysql",
-  logging: false,
+  user: "root",
+  database: "leelectronic",
 });
-let connectDB = async () => {
-  try {
-    await sequelize.authenticate();
-    console.log("Connection has been established successfully.");
-  } catch (error) {
-    console.error("Unable to connect to the database:", error);
-  }
-};
-module.exports = connectDB;
 
-// import mysql from "mysql2";
-
-// const connection = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   database: "leelectronic",
-// });
-
-// connection.query("SELECT * FROM `users` ", function (err, results, fields) {
-//   console.log(">>>check mysql<<<");
-//   console.log(results);
-//   console.log(results[0]);
-// });
-
-// export default connection;
+export default pool;

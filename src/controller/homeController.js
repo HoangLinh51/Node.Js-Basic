@@ -1,15 +1,18 @@
-import db from "../models/index";
+import pool from "../config/connectDB";
 
 let getHomepage = async (req, res) => {
-  try {
-    let data = await db.User.findAll();
-    return res.render("index", {
-      dataUsers: data,
-    }); //499
-  } catch (e) {
-    console.cog(e);
-  }
+  const [rows, fields] = await pool.execute("SELECT * FROM users");
+
+  return res.render("./index.ejs", { dataUser: rows, test: "abc string test" });
 };
+
+let getDetailPage = async (req, res) => {
+  let userId = req.params.id;
+  let [user] = await pool.execute(`select * from users where id = ?`, [userId]);
+  return res.send(JSON.stringify(user));
+};
+
 module.exports = {
   getHomepage,
+  getDetailPage,
 };

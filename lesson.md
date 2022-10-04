@@ -1,7 +1,15 @@
+Video 11:
+
+-ROUTER PARAMS - XÂY DỰNG TRANG CHI TIẾT USERS
+(tui sửa code rùi nên thấy hơi khác nha )
+video ni chủ yếu là ổng ns về cái route param với lại tạo trang detail users á
+ở cuối trang có cái bảng ông bấm zô detail là ra cái chi tiết người dùng
+
 Video 10:
 
 -CREATE THANH NAV - EJS LOOP DATA
 (tui có thanh nav rồi nên tui ejs loop data)
+cái này là tui tạo bảng rồi vức mấy thằng user zô trong nớ thui
 
 Video 9:
 
