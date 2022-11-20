@@ -6,6 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
     <link rel="stylesheet" href="fontawesome/fontawesome-free-6.1.1-web/css/all.min.css"/>
+    <!-- <style>
+      .button {
+        border: none;
+        color: white;
+        padding: 14px 18px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+      
+      .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #4CAF50;
+      }
+      
+      .button1:hover {
+        background-color: #4CAF50;
+        /* color: white; */
+      }
+      
+      .button2 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid red;
+      }
+      
+      .button2:hover {
+        background-color: red;
+        color: white;
+      }
+      
+      </style> -->
   </head>
   <body>
     <div class="container">
@@ -14,7 +52,7 @@
           <i class="fas fa-edit"></i> Sign up
         </div>
         <div class="card-body">
-          <form action="">
+          <!-- <form action="/create-new-user" method="post"> -->
             <div class="row">
               <div class="form-group col-6">
                 <label for="">First name:</label>
@@ -42,34 +80,72 @@
             <div class="row">
               <div class="form-group col-6">
                 <label for="">Password:</label>
-                <input type="text" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Password">
                 
               </div>
               <div class="form-group col-6">
                 <label for="">Enter Password:</label>
-                <input type="text" class="form-control" placeholder="Enter Password">
+                <input type="password" class="form-control" placeholder="Enter Password">
                 
               </div>
             </div>
             
             <div class="row mt-4">
               <div class="form-group col text-center">
-                <button type="submit" class="btn btn-default">
-                  <i class="fas fa-save"></i> <a href="\">Save</a>
+                <button type="submit" class="button button1">
+                  <i class="fas fa-save"></i><a href="/"> Save </a>
                 </button>
-                <button type="submit" class="btn btn-danger">
-                  <i class="fas fa-circle"></i> <a href="\">Cancel</a>
+                <button type="submit" class="button button2">
+                  <i class="fas fa-circle"></i><a href="/"> Cancel </a>
                 </button>
               </div>
             </div>
-          </form>
+          <!-- </form> -->
         </div>
       </div>
+      <div>
+        <div class="w3-container">
+            <h2>List users Table</h2>
+
+            <table class="w3-table-all w3-hoverable">
+                <thead>
+                    <tr class="w3-light-grey">
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <% for(let i=0; i < dataUser.length; i++) { %>
+                        <tr>
+                            <td>
+                                <%= dataUser[i].id %>
+                            </td>
+                            <td>
+                                <%= dataUser[i].firstName %>
+                            </td>
+                            <td>
+                                <%= dataUser[i].lastName %>
+                            </td>
+                            <td>
+                                <a href="/detail/user/<%= dataUser[i].id %>" target="_blank">Detail</a>
+                                <button type="button">Edit</button>
+                                <button type="button">Delete</button>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
     </div>
+      
+    <!-- </div>
       </div>
         <div class="card-footer"></div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

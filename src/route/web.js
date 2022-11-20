@@ -14,10 +14,9 @@ const initWebRoute = (app) => {
   router.get("/product", productController.product);
   router.get("/cart", cartController.cart);
   router.get("/signup", signupController.signup);
-  router.get("/detail/user/:id", homeController.getDetailPage);
-
-  // router.get("/detail/user/:userID", homeController.getDetailPage);
+  router.get("/detail/user/:id", signupController.getDetailPage);
 
   return app.use("/", router);
 };
+
 export default initWebRoute;
