@@ -15,6 +15,7 @@ const initWebRoute = (app) => {
   router.get("/cart", cartController.cart);
   router.get("/signup", signupController.signup);
   router.get("/detail/user/:id", signupController.getDetailPage);
+  router.post("/create-new-user", signupController.createNewUser);
 
   return app.use("/", router);
 };
