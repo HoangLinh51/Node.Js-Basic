@@ -1,3 +1,7 @@
+Video 13:
+
+- Done CRUD(create, detail, edit, delete)
+
 Video 12:
 
 -SỬ DỤNG FORM VÀ POST REQUEST VỚI NODE.JS

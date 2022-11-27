@@ -17,6 +17,10 @@ const initWebRoute = (app) => {
   router.get("/detail/user/:id", signupController.getDetailPage);
   router.post("/create-new-user", signupController.createNewUser);
 
+  router.post("/delete-user", signupController.deleteUser);
+  router.get("/edit-user/:id", signupController.getEditPage);
+  router.post("/update-user", signupController.postUpdateUser);
+
   return app.use("/", router);
 };
 

@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update user</title>
+    <style>
+      .update-user-container {
+        padding: 15px;
+        text-align: center;
+      }
+
+      .update-user-container label {
+        display: block;
+      }
+
+      .btn-save {
+        margin-top: 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="update-user-container">
+      <form action="/update-user" method="POST">
+        <div>
+          <label>First name:</label>
+          <input name="firstName" value="<%= dataUser.firstName %>" />
+        </div>
+        <div>
+          <label>Last name:</label>
+          <input name="lastName" value="<%= dataUser.lastName %>" />
+        </div>
+        <div>
+          <label>Phone:</label>
+          <input name="phone" value="<%= dataUser.phone %>" />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input name="email" value="<%= dataUser.email %>" />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input name="password" value="<%= dataUser.password %>" />
+        </div>
+        <input type="text" value="<%= dataUser.id %>" hidden name="id" />
+        <div>
+          <button class="btn-save" type="submit">Save</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
