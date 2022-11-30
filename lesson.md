@@ -1,3 +1,8 @@
+Video 14:
+
+-RESTfull API
+sử dụng Postman nối API lấy data
+
 Video 13:
 
 - Done CRUD(create, detail, edit, delete)
@@ -35,38 +40,3 @@ Video 8:
 Video 7:
 
 - ...
-<div class="w3-container">
-        <h2>List users Table</h2>
-  
-        <table class="w3-table-all w3-hoverable">
-          <thead>
-            <tr class="w3-light-grey">
-              <th>ID</th>
-              <th>First Name:</th>
-              <th>Last Name:</th>
-              <th>Number Phone:</th>
-              <th>Email:</th>
-              <th>Password:</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% for(let i=0; i < dataUser.length; i++) { %>
-            <tr>
-              <td><%= dataUser[i].id %></td>
-              <td><%= dataUser[i].firstName %></td>
-              <td><%= dataUser[i].lastName %></td>
-              <td><%= dataUser[i].number %></td>
-              <td><%= dataUser[i].email %></td>
-              <td><%= dataUser[i].password %></td>
-              <td>
-                <a href="/detail/user/<%= dataUser[i].id %>" target="_blank"
-                  >Detail</a
-                >
-                <button type="button">Edit</button>
-                <button type="button">Delete</button>
-              </td>
-            </tr>
-            <% } %>
-          </tbody>
-        </table>
-      </div>
