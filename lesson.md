@@ -1,7 +1,17 @@
+Video 15:
+
+-
+
 Video 14:
 
 -RESTfull API
 sử dụng Postman nối API lấy data
+cần 1 cầu nối để bên thứ 3 lấy đc data
+Application: ứng dụng
+UI: -là user tương tác với ứng dụng(Application)
+-là user tương tác với ứng dụng mà ko cần quan tâm ứng dụng đc xây dựng, hiện thực trên công cụ nào  
+API: -là ứng dụng(Application) tương tác với ứng dụng(Application)
+-là App tương tác với App mà ko cần quan tâm app được xây dựng, hiện thực trên công cụ nào
 
 Video 13:
 

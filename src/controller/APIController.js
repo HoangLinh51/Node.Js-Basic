@@ -1,9 +1,3 @@
-// let getAllUsers = (req, res) => {};
-
-// module.exports = {
-//   getAllUsers,
-// };
-
 import pool from "../config/connectDB";
 
 //http
