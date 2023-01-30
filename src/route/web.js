@@ -42,6 +42,7 @@ const initWebRoute = (app) => {
   router.get("/product", productController.product);
   router.get("/cart", cartController.cart);
   router.get("/signup", signupController.signup);
+  router.post("/login/user", signupController.loginPage)
   router.get("/detail/user/:id", signupController.getDetailPage);
   router.post("/create-new-user", signupController.createNewUser);
 

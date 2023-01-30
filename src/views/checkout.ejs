@@ -293,60 +293,39 @@
                   >
                 </div>
 
-                <form id="login-form-wrap" class="login collapse" method="post">
+
+                <form id="login-form-wrap" class="login collapse" method="POST" action="login/user">
                   <p>
                     If you have shopped with us before, please enter your
                     details in the boxes below. If you are a new customer please
                     proceed to the Billing &amp; Shipping section.
                   </p>
-
                   <p class="form-row form-row-first">
                     <label for="username"
-                      >Username or email <span class="required">*</span>
+                      >Email <span class="required">*</span>
                     </label>
-                    <input
-                      type="text"
-                      id="username"
-                      name="username"
-                      class="input-text"
-                    />
+                    <input type="text" id="username" name="email" class="input-text"/>
                   </p>
                   <p class="form-row form-row-last">
                     <label for="password"
                       >Password <span class="required">*</span>
                     </label>
-                    <input
-                      type="password"
-                      id="password"
-                      name="password"
-                      class="input-text"
-                    />
+                    <input type="password" id="password" name="password" class="input-text"/>
                   </p>
                   <div class="clear"></div>
-
                   <p class="form-row">
-                    <input
-                      type="submit"
-                      value="Login"
-                      name="login"
-                      class="button"
-                    />
-                    <label class="inline" for="rememberme"
-                      ><input
-                        type="checkbox"
-                        value="forever"
-                        id="rememberme"
-                        name="rememberme"
-                      />
+                    <input type="submit" value="Login" name="login" class="button"/>
+                    <label class="inline" for="rememberme">
+                      <input type="checkbox" value="forever" id="rememberme" name="rememberme" />
                       Remember me
                     </label>
                   </p>
                   <p class="lost_password">
                     <a href="#">Lost your password?</a>
                   </p>
-
                   <div class="clear"></div>
                 </form>
+
 
                 <div class="woocommerce-info">
                   Do not have an account?
@@ -355,30 +334,12 @@
 
                 <div class="woocommerce-info">
                   Have a coupon?
-                  <a
-                    class="showcoupon"
-                    data-toggle="collapse"
-                    href="#coupon-collapse-wrap"
-                    aria-expanded="false"
-                    aria-controls="coupon-collapse-wrap"
-                    >Click here to enter your code</a
-                  >
+                  <a class="showcoupon" data-toggle="collapse" href="#coupon-collapse-wrap" aria-expanded="false" aria-controls="coupon-collapse-wrap" >Click here to enter your code</a>
                 </div>
 
-                <form
-                  id="coupon-collapse-wrap"
-                  method="post"
-                  class="checkout_coupon collapse"
-                >
+                <form id="coupon-collapse-wrap" method="post" class="checkout_coupon collapse">
                   <p class="form-row form-row-first">
-                    <input
-                      type="text"
-                      value=""
-                      id="coupon_code"
-                      placeholder="Coupon code"
-                      class="input-text"
-                      name="coupon_code"
-                    />
+                    <input type="text" value="" id="coupon_code" placeholder="Coupon code" class="input-text" name="coupon_code"/>
                   </p>
 
                   <p class="form-row form-row-last">
@@ -412,11 +373,7 @@
                             >Country
                             <abbr title="required" class="required">*</abbr>
                           </label>
-                          <select
-                            class="country_to_state country_select"
-                            id="billing_country"
-                            name="billing_country"
-                          >
+                          <select class="country_to_state country_select" id="billing_country" name="billing_country">
                             <option value="">Select a country…</option>
                             <option value="AX">Åland Islands</option>
                             <option value="AF">Afghanistan</option>
@@ -445,16 +402,12 @@
                             <option value="BM">Bermuda</option>
                             <option value="BT">Bhutan</option>
                             <option value="BO">Bolivia</option>
-                            <option value="BQ">
-                              Bonaire, Saint Eustatius and Saba
-                            </option>
+                            <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
                             <option value="BA">Bosnia and Herzegovina</option>
                             <option value="BW">Botswana</option>
                             <option value="BV">Bouvet Island</option>
                             <option value="BR">Brazil</option>
-                            <option value="IO">
-                              British Indian Ocean Territory
-                            </option>
+                            <option value="IO">British Indian Ocean Territory</option>
                             <option value="VG">British Virgin Islands</option>
                             <option value="BN">Brunei</option>
                             <option value="BG">Bulgaria</option>
@@ -500,9 +453,7 @@
                             <option value="FR">France</option>
                             <option value="GF">French Guiana</option>
                             <option value="PF">French Polynesia</option>
-                            <option value="TF">
-                              French Southern Territories
-                            </option>
+                            <option value="TF">French Southern Territories</option>
                             <option value="GA">Gabon</option>
                             <option value="GM">Gambia</option>
                             <option value="GE">Georgia</option>
@@ -519,9 +470,7 @@
                             <option value="GW">Guinea-Bissau</option>
                             <option value="GY">Guyana</option>
                             <option value="HT">Haiti</option>
-                            <option value="HM">
-                              Heard Island and McDonald Islands
-                            </option>
+                            <option value="HM">Heard Island and McDonald Islands</option>
                             <option value="HN">Honduras</option>
                             <option value="HK">Hong Kong</option>
                             <option value="HU">Hungary</option>
@@ -611,18 +560,10 @@
                             <option value="SH">Saint Helena</option>
                             <option value="KN">Saint Kitts and Nevis</option>
                             <option value="LC">Saint Lucia</option>
-                            <option value="SX">
-                              Saint Martin (Dutch part)
-                            </option>
-                            <option value="MF">
-                              Saint Martin (French part)
-                            </option>
-                            <option value="PM">
-                              Saint Pierre and Miquelon
-                            </option>
-                            <option value="VC">
-                              Saint Vincent and the Grenadines
-                            </option>
+                            <option value="SX">Saint Martin (Dutch part)</option>
+                            <option value="MF">Saint Martin (French part)</option>
+                            <option value="PM">Saint Pierre and Miquelon</option>
+                            <option value="VC">Saint Vincent and the Grenadines</option>
                             <option value="SM">San Marino</option>
                             <option value="SA">Saudi Arabia</option>
                             <option value="SN">Senegal</option>
@@ -635,9 +576,7 @@
                             <option value="SB">Solomon Islands</option>
                             <option value="SO">Somalia</option>
                             <option value="ZA">South Africa</option>
-                            <option value="GS">
-                              South Georgia/Sandwich Islands
-                            </option>
+                            <option value="GS">South Georgia/Sandwich Islands</option>
                             <option value="KR">South Korea</option>
                             <option value="SS">South Sudan</option>
                             <option value="ES">Spain</option>
@@ -666,9 +605,7 @@
                             <option value="UG">Uganda</option>
                             <option value="UA">Ukraine</option>
                             <option value="AE">United Arab Emirates</option>
-                            <option selected="selected" value="GB">
-                              United Kingdom (UK)
-                            </option>
+                            <option selected="selected" value="GB">United Kingdom (UK)</option>
                             <option value="US">United States (US)</option>
                             <option value="UY">Uruguay</option>
                             <option value="UZ">Uzbekistan</option>
@@ -702,102 +639,36 @@
                             class="input-text"
                           />
                         </p>
-
-                        <!-- <p id="billing_last_name_field" class="form-row form-row-last validate-required">
-                                                <label class="" for="billing_last_name">Last Name <abbr title="required" class="required">*</abbr>
-                                                </label>
-                                                <input type="text" value="" placeholder="" id="billing_last_name" name="billing_last_name" class="input-text ">
-                                            </p>
-                                            <div class="clear"></div>
-
-                                            <p id="billing_company_field" class="form-row form-row-wide">
-                                                <label class="" for="billing_company">Company Name</label>
-                                                <input type="text" value="" placeholder="" id="billing_company" name="billing_company" class="input-text ">
-                                            </p> -->
-
-                        <p
-                          id="billing_address_1_field"
-                          class="form-row form-row-wide address-field validate-required"
-                        >
-                          <label class="" for="billing_address_1"
-                            >Address
+                        <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
+                          <label class="" for="billing_address_1" >
+                            Address 
                             <abbr title="required" class="required">*</abbr>
                           </label>
-                          <input
-                            type="text"
-                            value=""
-                            placeholder="Street address"
-                            id="billing_address_1"
-                            name="billing_address_1"
-                            class="input-text"
-                          />
+                          <input type="text" value="" placeholder="Street address" id="billing_address_1" name="billing_address_1" class="input-text"/>
                         </p>
 
-                        <p
-                          id="billing_address_2_field"
-                          class="form-row form-row-wide address-field"
-                        >
-                          <input
-                            type="text"
-                            value=""
-                            placeholder="Apartment, suite, unit etc. (optional)"
-                            id="billing_address_2"
-                            name="billing_address_2"
-                            class="input-text"
-                          />
+                        <p id="billing_address_2_field" class="form-row form-row-wide address-field">
+                          <input type="text" value="" placeholder="Apartment, suite, unit etc. (optional)" id="billing_address_2" name="billing_address_2" class="input-text"/>
                         </p>
 
-                        <p
-                          id="billing_city_field"
-                          class="form-row form-row-wide address-field validate-required"
-                          data-o_class="form-row form-row-wide address-field validate-required"
-                        >
-                          <label class="" for="billing_city"
-                            >Town / City
+                        <p id="billing_city_field" class="form-row form-row-wide address-field validate-required" data-o_class="form-row form-row-wide address-field validate-required">
+                          <label class="" for="billing_city">
+                            Town / City
                             <abbr title="required" class="required">*</abbr>
                           </label>
-                          <input
-                            type="text"
-                            value=""
-                            placeholder="Town / City"
-                            id="billing_city"
-                            name="billing_city"
-                            class="input-text"
-                          />
+                          <input type="text" value="" placeholder="Town / City" id="billing_city" name="billing_city" class="input-text"/>
                         </p>
 
-                        <p
-                          id="billing_state_field"
-                          class="form-row form-row-first address-field validate-state"
-                          data-o_class="form-row form-row-first address-field validate-state"
-                        >
+                        <p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
                           <label class="" for="billing_state">County</label>
-                          <input
-                            type="text"
-                            id="billing_state"
-                            name="billing_state"
-                            placeholder="State / County"
-                            value=""
-                            class="input-text"
-                          />
+                          <input type="text" id="billing_state" name="billing_state" placeholder="State / County" value="" class="input-text"/>
                         </p>
-                        <p
-                          id="billing_postcode_field"
-                          class="form-row form-row-last address-field validate-required validate-postcode"
-                          data-o_class="form-row form-row-last address-field validate-required validate-postcode"
-                        >
-                          <label class="" for="billing_postcode"
-                            >Postcode
+                        <p id="billing_postcode_field" class="form-row form-row-last address-field validate-required validate-postcode" data-o_class="form-row form-row-last address-field validate-required validate-postcode">
+                          <label class="" for="billing_postcode">
+                            Postcode
                             <abbr title="required" class="required">*</abbr>
                           </label>
-                          <input
-                            type="text"
-                            value=""
-                            placeholder="Postcode / Zip"
-                            id="billing_postcode"
-                            name="billing_postcode"
-                            class="input-text"
-                          />
+                          <input type="text" value="" placeholder="Postcode / Zip" id="billing_postcode" name="billing_postcode" class="input-text"/>
                         </p>
 
                         <div class="clear"></div>
