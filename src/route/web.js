@@ -5,8 +5,17 @@ import shopController from "../controller/shopController";
 import checkoutController from "../controller/checkoutController";
 import cartController from "../controller/cartController";
 import signupController from "../controller/signupController";
+
+import admincontroller from "../controller/adminController";
+// import brandController from "../controller/brandController";
+// import categoryController from "../controller/brandController";
+// import orderController from "../controller/brandController";
+// import productadController from "../controller/brandController";
+// import profileController from "../controller/brandController";
+
 import multer from "multer";
 import path from "path";
+
 var appRoot = require("app-root-path");
 let router = express.Router();
 
@@ -15,7 +24,6 @@ const storage = multer.diskStorage({
     cb(null, appRoot + "/src/public/image/");
   },
 
-  // By default, multer removes file extensions so let's add them back
   filename: function (req, file, cb) {
     cb(
       null,
@@ -43,8 +51,17 @@ const initWebRoute = (app) => {
   router.get("/cart", cartController.cart);
   router.get("/signup", signupController.signup);
   router.post("/login/user", signupController.loginPage)
+
   router.get("/detail/user/:id", signupController.getDetailPage);
   router.post("/create-new-user", signupController.createNewUser);
+
+  router.get("/admin", admincontroller.admin)
+  router.get("/brand", admincontroller.brand)
+  router.get("/category", admincontroller.category)
+  router.get("/order", admincontroller.order)
+  router.get("/product", admincontroller.productad)
+  router.get("/profile", admincontroller.profile)
+
 
   router.post("/delete-user", signupController.deleteUser);
   router.get("/edit-user/:id", signupController.getEditPage);

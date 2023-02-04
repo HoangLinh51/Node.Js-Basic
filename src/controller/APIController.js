@@ -1,8 +1,5 @@
 import pool from "../config/connectDB";
 
-//http
-// 404 501
-// json/xml => object
 let getAllUsers = async (req, res) => {
   const [rows, fields] = await pool.execute("SELECT * FROM users");
   return res.status(200).json({
