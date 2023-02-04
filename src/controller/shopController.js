@@ -1,5 +1,5 @@
 let shop = (req, res) => {
-    return res.render('shop')
+    return res.render('users/shop')
 }
 module.exports = {
     shop

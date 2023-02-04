@@ -54,25 +54,20 @@ const initWebRoute = (app) => {
 
   router.get("/detail/user/:id", signupController.getDetailPage);
   router.post("/create-new-user", signupController.createNewUser);
-
-  router.get("/admin", admincontroller.admin)
-  router.get("/brand", admincontroller.brand)
-  router.get("/category", admincontroller.category)
-  router.get("/order", admincontroller.order)
-  router.get("/product", admincontroller.productad)
-  router.get("/profile", admincontroller.profile)
-
-
   router.post("/delete-user", signupController.deleteUser);
   router.get("/edit-user/:id", signupController.getEditPage);
+
+  router.get("/admin/", admincontroller.admin)
+  router.get("/admin/brand", admincontroller.brand)
+  router.get("/admin/category", admincontroller.category)
+  router.get("/admin/order", admincontroller.order)
+  router.get("/admin/productad", admincontroller.productad)
+  router.get("/admin/profile", admincontroller.profile)
+
   router.post("/update-user", signupController.postUpdateUser);
 
   router.get("/upload", signupController.getUploadFilePage);
-  router.post(
-    "/upload-profile-pic",
-    upload.single("profile_pic"),
-    signupController.handleUploadFile
-  );
+  router.post("/upload-profile-pic", upload.single("profile_pic"), signupController.handleUploadFile);
 
   return app.use("/", router);
 };

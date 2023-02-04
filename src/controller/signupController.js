@@ -4,7 +4,7 @@ import multer from "multer";
 
 let signup = async (req, res) => {
   const [rows, fields] = await pool.execute("SELECT * FROM users");
-  return res.render("signup", { dataUser: rows, test: "abc string test" });
+  return res.render("users/signup", { dataUser: rows, test: "abc string test" });
 };
 
 let getDetailPage = async (req, res) => {

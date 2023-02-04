@@ -1,23 +1,20 @@
-// import pool from "../config/connectDB";
-// import multer from "multer";
-
 let admin = (req, res) => {
-    return res.render('admin')
+    return res.render('admin/admin')
 }
 let brand = (req, res) => {
-    return res.render('brand')
+    return res.render('admin/brand')
 }
 let category = (req, res) => {
-    return res.render('category')
+    return res.render('admin/category')
 }
 let order = (req, res) => {
-    return res.render('order')
+    return res.render('admin/order')
 }
 let productad = (req, res) => {
-    return res.render('productad')
+    return res.render('admin/productad')
 }
 let profile = (req, res) => {
-    return res.render('profile')
+    return res.render('admin/profile')
 }
 // let getDetailPage = async (req, res) => {
 //     let userId = req.params.id;

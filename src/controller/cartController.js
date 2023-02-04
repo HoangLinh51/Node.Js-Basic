@@ -1,5 +1,5 @@
 let cart = (req, res) => {
-    return res.render('cart')
+    return res.render('users/cart')
 }
 module.exports = {
     cart
