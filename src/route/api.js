@@ -1,5 +1,5 @@
 import express from "express";
-import APIController from "../controller/APIController";
+import APIController from "../controller/api-admin/APIController";
 
 let router = express.Router();
 

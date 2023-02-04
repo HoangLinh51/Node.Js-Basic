@@ -10,8 +10,8 @@ let category = (req, res) => {
 let order = (req, res) => {
     return res.render('admin/order')
 }
-let productad = (req, res) => {
-    return res.render('admin/productad')
+let product = (req, res) => {
+    return res.render('admin/product')
 }
 let profile = (req, res) => {
     return res.render('admin/profile')
@@ -29,7 +29,7 @@ module.exports = {
     brand,
     category,
     order,
-    productad,
+    product,
     profile,
     // getDetailPage
 }

@@ -6,12 +6,7 @@ import checkoutController from "../controller/checkoutController";
 import cartController from "../controller/cartController";
 import signupController from "../controller/signupController";
 
-import admincontroller from "../controller/adminController";
-// import brandController from "../controller/brandController";
-// import categoryController from "../controller/brandController";
-// import orderController from "../controller/brandController";
-// import productadController from "../controller/brandController";
-// import profileController from "../controller/brandController";
+import admincontroller from "../controller/admin/adminController";
 
 import multer from "multer";
 import path from "path";
@@ -61,7 +56,7 @@ const initWebRoute = (app) => {
   router.get("/admin/brand", admincontroller.brand)
   router.get("/admin/category", admincontroller.category)
   router.get("/admin/order", admincontroller.order)
-  router.get("/admin/productad", admincontroller.productad)
+  router.get("/admin/product", admincontroller.product)
   router.get("/admin/profile", admincontroller.profile)
 
   router.post("/update-user", signupController.postUpdateUser);
