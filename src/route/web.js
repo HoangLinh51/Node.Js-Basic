@@ -8,6 +8,7 @@ import signupController from "../controller/signupController";
 
 import admincontroller from "../controller/admin/adminController";
 
+
 import multer from "multer";
 import path from "path";
 
@@ -51,6 +52,7 @@ const initWebRoute = (app) => {
   router.post("/create-new-user", signupController.createNewUser);
   router.post("/delete-user", signupController.deleteUser);
   router.get("/edit-user/:id", signupController.getEditPage);
+  router.post("/update-user", signupController.postUpdateUser);
 
   router.get("/admin/", admincontroller.admin)
   router.get("/admin/brand", admincontroller.brand)
@@ -58,8 +60,8 @@ const initWebRoute = (app) => {
   router.get("/admin/order", admincontroller.order)
   router.get("/admin/product", admincontroller.product)
   router.get("/admin/profile", admincontroller.profile)
-
-  router.post("/update-user", signupController.postUpdateUser);
+  router.get("/admin/login", admincontroller.loginadmin)
+  // router.get("/detail/admin/:id", admincontroller.getDetailAdmin);
 
   router.get("/upload", signupController.getUploadFilePage);
   router.post("/upload-profile-pic", upload.single("profile_pic"), signupController.handleUploadFile);

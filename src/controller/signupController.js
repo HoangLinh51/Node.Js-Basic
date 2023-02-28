@@ -50,7 +50,6 @@ let loginPage = async (req, res, next) => {
     let email = req.body.email;
     let password = req.body.password;
     let [emus] = await pool.execute(`select * from users where email = ? and password = ? `, [email, password]);
-
     if (emus.length > 0){
       return res.redirect('/');
     }
@@ -66,7 +65,7 @@ let deleteUser = async (req, res) => {
 let getEditPage = async (req, res) => {
   let id = req.params.id;
   let [user] = await pool.execute("Select * from users where id = ?", [id]);
-  return res.render("update.ejs", { dataUser: user[0] }); // x <- y
+  return res.render("users/update.ejs", { dataUser: user[0] }); // x <- y
 };
 
 let postUpdateUser = async (req, res) => {

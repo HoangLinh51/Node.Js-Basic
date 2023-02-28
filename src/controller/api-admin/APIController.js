@@ -9,16 +9,16 @@ let getAllUsers = async (req, res) => {
 };
 
 let createNewUser = async (req, res) => {
-  let { firstName, lastName, phone, email } = req.body;
-  if (!firstName || !lastName || !phone || !email) {
+  let { firstName, lastName, phone, email, password } = req.body;
+  if (!firstName || !lastName || !phone || !email || !password) {
     return res.status(200).json({
       message: "missing required params",
     });
   }
 
   await pool.execute(
-    "insert into users(firstName, lastName, phone, email) values (?, ?, ?, ?)",
-    [firstName, lastName, phone, email]
+    "insert into users(firstName, lastName, phone, email, password) values (?, ?, ?, ?, ?)",
+    [firstName, lastName, phone, email, password]
   );
   return res.status(200).json({
     message: "ok",
@@ -26,16 +26,16 @@ let createNewUser = async (req, res) => {
 };
 
 let updateUser = async (req, res) => {
-  let { firstName, lastName, phone, email, id } = req.body;
-  if (!firstName || !lastName || !phone || !email || !id) {
+  let { firstName, lastName, phone, email, password, id } = req.body;
+  if (!firstName || !lastName || !phone || !email || !password || !id) {
     return res.status(200).json({
       message: "missing required params",
     });
   }
 
   await pool.execute(
-    "update users set firstName= ?, lastName = ? , phone = ? , email= ? where id = ?",
-    [firstName, lastName, phone, email, id]
+    "update users set firstName= ?, lastName = ? , phone = ? , email= ? , password= ? , where id = ?",
+    [firstName, lastName, phone, email, password, id]
   );
   return res.status(200).json({
     message: "ok",

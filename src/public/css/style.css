@@ -1618,7 +1618,7 @@ table tbody tr {
     font-size: .8rem;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
     .analytics {
         grid-template-columns: repeat(2, 1fr);
     }
